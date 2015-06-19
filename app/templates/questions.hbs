@@ -1,7 +1,7 @@
 <h1>The message board</h1>
   <ul>
     {{#each question in model}}
-      <li>{{#link-to 'question' question}} Question: {{question.questionText}}{{/link-to}}</li>
+      <li>{{#link-to 'question' question}} Question: {{question.questionText}} Author: {{question.author}}{{/link-to}}</li>
     {{/each}}
   </ul>
 

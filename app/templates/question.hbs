@@ -29,15 +29,14 @@
 <button class="btn btn-danger" {{action 'delete'}}>delete</button>
 
 
-<!-- <h3>Answers</h3>
+<h3>Answers</h3>
 
-{{#each answer in answers itemController="answer"}}
+{{#each answer in model.answers}}
   <p>
     {{answer.answerText}}
-    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
   </p>
 {{/each}}
 
 {{outlet}}
 
-<p>{{#link-to 'new-answer' this class="btn btn-success"}}Add your answer!{{/link-to}}</p> -->
+<p>{{#link-to 'new-answer' this class="btn btn-success"}}Add your answer!{{/link-to}}</p>
