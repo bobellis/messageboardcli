@@ -1,0 +1,12 @@
+<h1>The message board</h1>
+  <ul>
+    {{#each question in model}}
+      <li>{{#link-to 'question' question}} Question: {{question.questionText}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+
+
+{{#link-to 'new-question' classNames='btn btn-success'}} New Question {{/link-to}}
+
+
+{{outlet}}
