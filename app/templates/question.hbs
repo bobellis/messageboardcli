@@ -1,0 +1,43 @@
+{{#if isEditing}}
+  <form>
+  <div class="form-group">
+    <label for="questionText">Question: </label>
+    {{input value=model.questionText id="questionText" class="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description: </label>
+    {{input value=model.description id="description" class="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label for="author">Author: </label>
+    {{input value=model.author id="author" class="form-control"}}
+  </div>
+
+  <button class="btn btn-primary" {{action 'save'}}>Save</button>
+
+  </form>
+
+{{else}}
+<h1>Question: {{model.questionText}}</h1>
+<h4>Description: {{model.description}}</h4>
+<h4>Author: {{model.author}}</h4>
+<button class="btn btn-warning" {{action 'edit'}}>edit</button>
+{{/if}}
+
+<button class="btn btn-danger" {{action 'delete'}}>delete</button>
+
+
+<!-- <h3>Answers</h3>
+
+{{#each answer in answers itemController="answer"}}
+  <p>
+    {{answer.answerText}}
+    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+  </p>
+{{/each}}
+
+{{outlet}}
+
+<p>{{#link-to 'new-answer' this class="btn btn-success"}}Add your answer!{{/link-to}}</p> -->
